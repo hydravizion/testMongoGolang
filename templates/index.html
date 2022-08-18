@@ -1,0 +1,27 @@
+{{template "header.html"}}
+
+<div class="album py-4 bg-light">
+    <div class="container">
+        <div class="row">
+            {{range .datas}}
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-body">
+                        <p class="card-text">
+                            <h4>{{.Name}}</h4>
+                            <p>{{.Uid}}</p>
+                            <p>{{.Email}}</p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {{end}}
+            <input type="text" id="Name" ><br><br>
+            <input type="text" id="Uid" ><br><br>
+            <input type="text" id="Email" ><br><br>
+            <button onclick="window.location.href='/view/add'">Continue</button>
+        </div>
+    </div>
+</div>
+
+{{template "footer.html"}}
